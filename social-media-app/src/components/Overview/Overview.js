@@ -1,6 +1,133 @@
+import OverviewCard from './OverviewCard';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import './Overview.css';
+
+
 function Overview() {
-    return(
-        <h1>This is the Overview!!</h1>
+    const overviewData = [
+        {
+            name: 'Page Views',
+            icon: '@',
+            total: 87,
+            stats: 3,
+            activity: 'true'
+        },
+        {
+            name: 'Likes',
+            icon: '@',
+            total: 52,
+            stats: 2,
+            activity: 'false'
+        },
+        {
+            name: 'Likes',
+            icon: '@',
+            total: 5462,
+            stats: 2257,
+            activity: 'true'
+        },
+        {
+            name: 'Page Views',
+            icon: '@',
+            total: '52k',
+            stats: 1375,
+            activity: 'true'
+        },
+        {
+            name: 'Retweets',
+            icon: '@',
+            total: 117,
+            stats: 303,
+            activity: 'true'
+        },
+        {
+            name: 'Likes',
+            icon: '@',
+            total: 507,
+            stats: 553,
+            activity: 'true'
+        },
+        {
+            name: 'Likes',
+            icon: '@',
+            total: 107,
+            stats: 19,
+            activity: 'false'
+        },
+        {
+            name: 'Total Views',
+            icon: '@',
+            total: 1407,
+            stats: 12,
+            activity: 'false'
+        },
+    ];
+
+    return (
+        <Container>
+            <h3>Overview-Today</h3>
+            <div className="content">
+                <OverviewCard
+                    name={overviewData[0].name}
+                    icon={overviewData[0].icon}
+                    total={overviewData[0].total}
+                    stats={overviewData[0].stats}
+                    activity={overviewData[0].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[1].name}
+                    icon={overviewData[1].icon}
+                    total={overviewData[1].total}
+                    stats={overviewData[1].stats}
+                    activity={overviewData[1].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[2].name}
+                    icon={overviewData[2].icon}
+                    total={overviewData[2].total}
+                    stats={overviewData[2].stats}
+                    activity={overviewData[2].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[3].name}
+                    icon={overviewData[3].icon}
+                    total={overviewData[3].total}
+                    stats={overviewData[3].stats}
+                    activity={overviewData[3].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[4].name}
+                    icon={overviewData[4].icon}
+                    total={overviewData[4].total}
+                    stats={overviewData[4].stats}
+                    activity={overviewData[4].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[5].name}
+                    icon={overviewData[5].icon}
+                    total={overviewData[5].total}
+                    stats={overviewData[5].stats}
+                    activity={overviewData[5].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[6].name}
+                    icon={overviewData[6].icon}
+                    total={overviewData[6].total}
+                    stats={overviewData[6].stats}
+                    activity={overviewData[6].activity}>
+                </OverviewCard>
+                <OverviewCard
+                    name={overviewData[7].name}
+                    icon={overviewData[7].icon}
+                    total={overviewData[7].total}
+                    stats={overviewData[7].stats}
+                    activity={overviewData[7].activity}>
+                </OverviewCard>
+            </div>
+        </Container>
+
     );
 }
 

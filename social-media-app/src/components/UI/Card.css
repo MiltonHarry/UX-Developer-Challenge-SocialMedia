@@ -1,0 +1,82 @@
+/* Card Container */
+.content {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: space-around;
+  }
+
+
+  /* Overview Card */
+.cardoverview-items{
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 120px;
+    width: 260px;
+    margin: 20px 0 20px 0;
+}
+
+.cardoverview-items p{
+    margin: 0;
+} 
+
+
+
+/* Facebook Card */
+.cardfacebook{
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 200px;
+    max-width: 260px;
+    min-width: 260px;
+    border-top: solid 0.3em;
+    border-top-color:hsl(195, 100%, 50%);
+    cursor: pointer;
+   }
+
+   /* Twitter Card */
+   .cardtwitter{
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 200px;
+    max-width: 260px;
+    min-width: 260px;
+    border-top: solid 0.3em;
+    border-top-color:hsl(203, 89%, 53%);
+    cursor: pointer;
+   }
+
+   /* Instagram Card */
+   .cardinstagram{
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 200px;
+    width: 260px;
+    border-top: solid 0.3em transparent;
+    border-radius: 5px;
+    border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+    cursor: pointer;
+  }
+
+  /* Youtube Card */
+   .cardyoutube{
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 200px;
+    max-width: 260px;
+    min-width: 260px;
+    border-top: solid 0.3em;
+    border-top-color: hsl(348, 97%, 39%);
+    cursor: pointer;
+   }
