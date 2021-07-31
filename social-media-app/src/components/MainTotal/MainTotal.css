@@ -1,5 +1,3 @@
-
-
 .total-number {
     font-size: 3rem;
     justify-content: center;
@@ -14,6 +12,7 @@
     justify-content: center;
     font-weight: 700;
     font-size: 14px;
+    align-items: center;
   }
 
   .total-label{
@@ -34,23 +33,16 @@
     font-weight: 700;
   }
 
-  .added {
-    color: hsl(163, 72%, 41%);
+  .data-percentege {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     font-size: 14px;
     font-weight: 700;
    }
 
-  .removed {
-    color: hsl(356, 69%, 56%);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-   }
+
 
   
 

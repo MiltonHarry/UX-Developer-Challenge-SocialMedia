@@ -1,8 +1,18 @@
+import { useState } from "react";
 import { Container, Navbar, NavItem, } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Switch from 'react-switch'
 
-function Header(props) {
+const Header = (props) => {
+
+    const totalFollowers = "23,004"
+
+    const [toggleState, setToggleState] = useState(false);
+
+    const handleToggle = () => {
+        setToggleState(!toggleState);
+        props.toggleTheme();
+    }
 
     return (
         <Container>
@@ -10,16 +20,23 @@ function Header(props) {
                 <Container>
                     <Navbar.Brand>
                         <h2>Social Media DashBoard</h2>
-                        <div className="nav-text">Total Followers: 23,004</div>
+                        <div className="nav-text">Total Followers: {totalFollowers}</div>
                     </Navbar.Brand>
-                    <NavItem className="justify-content-end"> 
-                        <label className="nav-text">Dark Mode </label>
-                        <Switch
-                            onChange={() => props.toggleTheme()}
-                            //checked={}
-                            className="react-switch"
-                            checkedIcon={false}
-                            uncheckedIcon={false}/>
+                    <NavItem className="justify-content-end">
+                        <label htmlFor="switch" className="nav-text">Dark Mode </label>
+                        <div className="switch-container">
+                            <Switch
+                                id="switch"
+                                onChange={handleToggle}
+                                checked={toggleState}
+                                className="react-switch"
+                                checkedIcon={false}
+                                uncheckedIcon={false}
+                                offColor='#AEB3CB'
+                                onColor='#3eda82'
+                                offHandleColor='#f5f7ff'
+                                onHandleColor='#1f212e' />
+                        </div>
                     </NavItem>
                 </Container>
             </Navbar>

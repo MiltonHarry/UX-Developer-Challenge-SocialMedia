@@ -1,0 +1,35 @@
+.icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2px;
+    }
+  
+  .icon-facebook{
+    background-image: url("./icon-facebook.svg");
+  }
+
+  .icon-twitter{
+    background-image: url("./icon-twitter.svg");
+  }
+  
+  .icon-instagram{
+    background-image: url("./icon-instagram.svg");
+  }
+
+  .icon-youtube{
+    background-image: url("./icon-youtube.svg");
+  }
+
+  .icon-up{
+    background-image: url("./icon-up.svg");
+  }
+
+  .icon-down{
+    background-image: url("./icon-down.svg");
+  }
+
+ 

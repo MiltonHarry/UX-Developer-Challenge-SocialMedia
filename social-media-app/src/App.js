@@ -6,6 +6,9 @@ import Header from './components/Header/Header';
 import styled, { ThemeProvider } from 'styled-components';
 import {lightTheme, darkTheme, GlobalStyles} from './themes'
 import './App.css';
+import './images/icons.css';
+import ModalData from './components/UI/ModalData';
+
 
 const StyledApp = styled.div`
 `
@@ -30,6 +33,7 @@ function App() {
         <MainTotal></MainTotal>
         <Overview></Overview>
       </StyledApp>
+      <ModalData></ModalData>
     </ThemeProvider>
 
   );

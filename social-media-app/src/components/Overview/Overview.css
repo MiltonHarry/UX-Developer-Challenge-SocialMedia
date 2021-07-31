@@ -1,20 +1,15 @@
-.col{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 20%;
-    margin: 0.5rem 0 0.5rem 0;
-}
-.overview-label{
+.label-grey{
     font-weight: 700;
     font-size: 14px;
-    color:hsl(228, 12%, 44%);
 }
 
 .overview-total{
     font-weight: 700;
     font-size: 2em;
+    margin-right: 10px;
+    
 }
-
+ 
 .right-content{
     display: flex;
     justify-content: flex-end;

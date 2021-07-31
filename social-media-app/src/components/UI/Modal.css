@@ -1,0 +1,47 @@
+.modal-content{
+    border-radius: 1.3rem;
+}
+
+.modal-header{
+    border: none;
+    border-radius: 1.3rem 1.3rem 0 0; 
+}
+
+.modal-body{
+    padding: 0;
+    border-radius: 0 0 1.3rem 1.3rem; 
+}
+
+.top-modal{
+   padding: 10px 20px;
+}
+
+.bottom-modal{
+    padding: 10px 20px;
+}
+
+.total-modal-row{
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.data-container-modal{
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    width: 225px;
+}
+
+.data-container-modal p{
+    width: 110px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.modal-graph-container{
+    height: 270px;
+    width: 100%;
+}
+
+
+

@@ -5,42 +5,48 @@ import './MainTotal.css';
 import { Container } from "react-bootstrap";
 
 function MainTotal() {
+
     const mainSocial = [
         {
-            icon: '%',
+            icon: 'icon icon-up',
             name: '@nathanf',
             total: 1987,
             stats: 12,
             activity: 'true',
             label: 'Followers',
-            socialMedia: 'facebook'
+            socialMedia: 'facebook',
+            smIcon: 'icon icon-facebook'
         },
         {
-            icon: '%',
+            icon: 'icon icon-up',
             name: '@nathanf',
             total: 1044,
             stats: 99,
             activity: 'true',
             label: 'Followers',
-            socialMedia: 'twitter'
+            socialMedia: 'twitter',
+            smIcon: 'icon icon-twitter'
         },
         {
-            icon: '%',
+            icon: 'icon icon-up',
             name: '@realnathanf',
             total: '11k',
             stats: 1099,
             activity: 'true',
             label: 'Followers',
-            socialMedia: 'instagram'
+            socialMedia: 'instagram',
+            smIcon: 'icon icon-instagram'
+
         },
         {
-            icon: '%',
+            icon: 'icon icon-down',
             name: 'Nathan F.',
             total: 8239,
             stats: 144,
             activity: 'false',
             label: 'Subscribers',
-            socialMedia: 'youtube'
+            socialMedia: 'youtube',
+            smIcon: 'icon icon-youtube'
         },
 
     ];
@@ -55,7 +61,8 @@ function MainTotal() {
                     stats={mainSocial[0].stats}
                     activity={mainSocial[0].activity}
                     label={mainSocial[0].label}
-                    socialMedia={mainSocial[0].socialMedia}>
+                    socialMedia={mainSocial[0].socialMedia}
+                    smIcon={mainSocial[0].smIcon}>
                 </MainTotalCard>
                 <MainTotalCard
                     icon={mainSocial[1].icon}
@@ -64,7 +71,8 @@ function MainTotal() {
                     stats={mainSocial[1].stats}
                     activity={mainSocial[1].activity}
                     label={mainSocial[1].label}
-                    socialMedia={mainSocial[1].socialMedia}>
+                    socialMedia={mainSocial[1].socialMedia}
+                    smIcon={mainSocial[1].smIcon}>
                 </MainTotalCard>
                 <MainTotalCard
                     icon={mainSocial[2].icon}
@@ -73,7 +81,8 @@ function MainTotal() {
                     stats={mainSocial[2].stats}
                     activity={mainSocial[2].activity}
                     label={mainSocial[2].label}
-                    socialMedia={mainSocial[2].socialMedia}>
+                    socialMedia={mainSocial[2].socialMedia}
+                    smIcon={mainSocial[2].smIcon}>
                 </MainTotalCard>
                 <MainTotalCard
                     icon={mainSocial[3].icon}
@@ -82,9 +91,11 @@ function MainTotal() {
                     stats={mainSocial[3].stats}
                     activity={mainSocial[3].activity}
                     label={mainSocial[3].label}
-                    socialMedia={mainSocial[3].socialMedia}>
+                    socialMedia={mainSocial[3].socialMedia}
+                    smIcon={mainSocial[3].smIcon}>
                 </MainTotalCard>
             </div>
+            
         </Container>
     );
 }

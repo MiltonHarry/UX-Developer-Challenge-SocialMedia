@@ -6,7 +6,9 @@ export const lightTheme = {
     fontColor: 'hsl(230, 17%, 14%)',
     cardBg: 'hsl(227, 47%, 96%)',
     fontColor2: 'hsl(228, 12%, 44%)',
-    hoverColor: 'hsl(228, 12%, 92%)'
+    hoverColor: 'hsl(228, 12%, 92%)',
+    modalTop: 'hsl(225, 100%, 98%)',
+    modalBottom:'hsl(0, 0%, 100%)'
 }
 
 //Dark Theme Colors
@@ -15,21 +17,26 @@ export const darkTheme = {
     fontColor: 'hsl(0, 0%, 100%)',
     cardBg: 'hsl(228, 28%, 20%)',
     fontColor2: 'hsl(228, 34%, 66%)',
-    hoverColor: 'hsl(229, 28%, 24%)'
+    hoverColor: 'hsl(229, 28%, 24%)',
+    modalTop: 'hsl(232, 19%, 15%)',
+    modalBottom:'hsl(230, 17%, 14%)'
+    
 }
 
-//Colors for: Body, h2 and h3, Cards, Header/Nav text, SM Total and Labels, SM UserName,
+//Colors for: Body, h2 and h3, Cards, Header/Nav text, SocialMedia Total and Labels, SocialMedia UserName, Hover, Modal, Added and Removed followers 
 export const GlobalStyles = createGlobalStyle`
 
     body{
         background: ${(props) => props.theme.body};
-        background-size: cover;
-        background-repeat: no-repeat;
         color: ${(props) => props.theme.fontColor};
     }
 
     h2{
         color: ${(props) => props.theme.fontColor};
+    }
+
+    .label-grey{
+        color: ${(props) => props.theme.fontColor2};
     }
 
     .cardfacebook{
@@ -68,15 +75,9 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${(props) => props.theme.cardBg};
     }
 
-    .cardoverview-items:hover{
-        background-color: ${(props) => props.theme.hoverColor};
-    }
-    
 
     .nav-text{
         color: ${(props) => props.theme.fontColor2};
-        font-size: 14px;
-        font-weight: 700;
     }
 
     .total-number{
@@ -91,6 +92,28 @@ export const GlobalStyles = createGlobalStyle`
         color: ${(props) => props.theme.fontColor2};
     }
 
+    .modal-content{
+        background-color: ${(props) => props.theme.modalBottom};
+    }
 
- 
+    .modal-header{
+        background-color: ${(props) => props.theme.modalTop};
+    }
+
+    .top-modal{
+        background-color: ${(props) => props.theme.modalTop};
+    }
+
+    .btn-close{
+        color: ${(props) => props.theme.fontColor};
+    }
+
+    .added {
+        color: hsl(163, 72%, 41%);
+    }
+    
+    .removed {
+        color: hsl(356, 69%, 56%);
+    }
+
 `

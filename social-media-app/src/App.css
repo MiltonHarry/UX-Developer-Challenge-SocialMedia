@@ -8,13 +8,148 @@ body{
   font-family: 'Inter', sans-serif;
   height: 100%;
   margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.justify-content-end{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.justify-content-end label{
+  margin-right: 5px ;
+
+}
+
+
 h2, h3{
+  font-weight: 700;
+}
+
+.nav-text{
   font-weight: 700;
 }
 
 
 .container{
   margin-bottom: 30px;
+}
+
+.col{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 20%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+@media only screen and (max-width: 1199px) {
+
+  .content{
+    justify-content: space-between;
+  }
+
+  
+  .cardyoutube{
+    margin-top: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+  .cardinstagram{
+    margin-top: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .cardinstagram{
+    margin-top: 30px;
+  }
+
+  .container, .container-sm{
+    max-width: 630px;
+  } 
+
+}
+
+
+@media only screen and (max-width: 560px) {
+
+  .content{
+    justify-content: space-around;
+  }
+
+  .cardfacebook{
+    width: 200px;
+  }
+
+  .cardtwitter{
+    width: 200px;
+  }
+
+  .cardinstagram{
+    width: 200px;
+  }
+
+  .cardyoutube{
+    width: 200px;
+  }
+
+  .cardoverview-items{
+    width: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 440px) {
+
+  .container{
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  .content{
+    justify-content: space-around;
+  }
+
+  .cardfacebook{
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .cardtwitter{
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .cardinstagram{
+    margin-top: 20px;
+    width: 150px;
+  }
+  
+  .cardyoutube{
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .cardoverview-items{
+    width: 150px;
+    height: auto;
+  }
+
+  .overview-total{
+    text-align: center;
+  }
+
+  .right-content{
+    justify-content: center;
+  }
+
 }

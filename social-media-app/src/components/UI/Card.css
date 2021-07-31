@@ -24,16 +24,14 @@
 } 
 
 
-
 /* Facebook Card */
 .cardfacebook{
     border-radius: 5px;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    min-height: 200px;
-    max-width: 260px;
-    min-width: 260px;
+    height: 200px;
+    width: 260px;
     border-top: solid 0.3em;
     border-top-color:hsl(195, 100%, 50%);
     cursor: pointer;
@@ -45,9 +43,8 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    min-height: 200px;
-    max-width: 260px;
-    min-width: 260px;
+    height: 200px;
+    width: 260px;
     border-top: solid 0.3em;
     border-top-color:hsl(203, 89%, 53%);
     cursor: pointer;
@@ -73,10 +70,13 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    min-height: 200px;
-    max-width: 260px;
-    min-width: 260px;
+    height: 200px;
+    width: 260px;
     border-top: solid 0.3em;
     border-top-color: hsl(348, 97%, 39%);
     cursor: pointer;
    }
+
+
+
+
