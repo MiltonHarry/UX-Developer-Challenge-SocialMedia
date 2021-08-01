@@ -3,7 +3,7 @@ function MainTotalCard(props) {
 
     //Total SocialMedia Cards
     return (
-        <Card className={props.socialMedia}>
+        <Card className={props.socialMedia} onClick={props.onClick}>
             <div className="total-user">
                 <i className={props.smIcon} />
                 <label>{props.name}</label>

@@ -7,13 +7,15 @@ import styled, { ThemeProvider } from 'styled-components';
 import {lightTheme, darkTheme, GlobalStyles} from './themes'
 import './App.css';
 import './images/icons.css';
-import ModalData from './components/UI/ModalData';
+
 
 
 const StyledApp = styled.div`
 `
-//Darkmode-Light mode toggle funtion -- start
+
 function App() {
+
+//Darkmode-Light mode toggle funtion -- start
   const [theme, setTheme] = useState("light");
 
 
@@ -29,11 +31,10 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles/>
       <StyledApp>
-        <Header toggleTheme={themeToggler}></Header>
-        <MainTotal></MainTotal>
-        <Overview></Overview>
+        <Header toggleTheme={themeToggler} />
+        <MainTotal />
+        <Overview />
       </StyledApp>
-      <ModalData></ModalData>
     </ThemeProvider>
 
   );

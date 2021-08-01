@@ -1,55 +1,60 @@
+import { useState } from "react";
 import MainTotalCard from "./MainTotalCard";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './MainTotal.css';
 import { Container } from "react-bootstrap";
+import MyModal from '../Modal/MyModal';
+
+const mainSocial = [
+    {
+        icon: 'icon icon-up',
+        name: '@nathanf',
+        total: 1987,
+        stats: 12,
+        activity: 'true',
+        label: 'Followers',
+        socialMedia: 'facebook',
+        smIcon: 'icon icon-facebook'
+    },
+    {
+        icon: 'icon icon-up',
+        name: '@nathanf',
+        total: 1044,
+        stats: 99,
+        activity: 'true',
+        label: 'Followers',
+        socialMedia: 'twitter',
+        smIcon: 'icon icon-twitter'
+    },
+    {
+        icon: 'icon icon-up',
+        name: '@realnathanf',
+        total: '11k',
+        stats: 1099,
+        activity: 'true',
+        label: 'Followers',
+        socialMedia: 'instagram',
+        smIcon: 'icon icon-instagram'
+
+    },
+    {
+        icon: 'icon icon-down',
+        name: 'Nathan F.',
+        total: 8239,
+        stats: 144,
+        activity: 'false',
+        label: 'Subscribers',
+        socialMedia: 'youtube',
+        smIcon: 'icon icon-youtube'
+    },
+
+];
 
 function MainTotal() {
+    const [modalShow, setModalShow] = useState(false);
 
-    const mainSocial = [
-        {
-            icon: 'icon icon-up',
-            name: '@nathanf',
-            total: 1987,
-            stats: 12,
-            activity: 'true',
-            label: 'Followers',
-            socialMedia: 'facebook',
-            smIcon: 'icon icon-facebook'
-        },
-        {
-            icon: 'icon icon-up',
-            name: '@nathanf',
-            total: 1044,
-            stats: 99,
-            activity: 'true',
-            label: 'Followers',
-            socialMedia: 'twitter',
-            smIcon: 'icon icon-twitter'
-        },
-        {
-            icon: 'icon icon-up',
-            name: '@realnathanf',
-            total: '11k',
-            stats: 1099,
-            activity: 'true',
-            label: 'Followers',
-            socialMedia: 'instagram',
-            smIcon: 'icon icon-instagram'
-
-        },
-        {
-            icon: 'icon icon-down',
-            name: 'Nathan F.',
-            total: 8239,
-            stats: 144,
-            activity: 'false',
-            label: 'Subscribers',
-            socialMedia: 'youtube',
-            smIcon: 'icon icon-youtube'
-        },
-
-    ];
+    const [socialType, setSocialType] = useState('');
 
     return (
         <Container>
@@ -62,7 +67,11 @@ function MainTotal() {
                     activity={mainSocial[0].activity}
                     label={mainSocial[0].label}
                     socialMedia={mainSocial[0].socialMedia}
-                    smIcon={mainSocial[0].smIcon}>
+                    smIcon={mainSocial[0].smIcon}
+                    onClick={() => {
+                        setModalShow(true);
+                        setSocialType("facebook");
+                    }}>
                 </MainTotalCard>
                 <MainTotalCard
                     icon={mainSocial[1].icon}
@@ -72,7 +81,11 @@ function MainTotal() {
                     activity={mainSocial[1].activity}
                     label={mainSocial[1].label}
                     socialMedia={mainSocial[1].socialMedia}
-                    smIcon={mainSocial[1].smIcon}>
+                    smIcon={mainSocial[1].smIcon}
+                    onClick={() => {
+                        setModalShow(true);
+                        setSocialType("twitter");
+                    }}>
                 </MainTotalCard>
                 <MainTotalCard
                     icon={mainSocial[2].icon}
@@ -82,7 +95,11 @@ function MainTotal() {
                     activity={mainSocial[2].activity}
                     label={mainSocial[2].label}
                     socialMedia={mainSocial[2].socialMedia}
-                    smIcon={mainSocial[2].smIcon}>
+                    smIcon={mainSocial[2].smIcon}
+                    onClick={() => {
+                        setModalShow(true);
+                        setSocialType("instagram");
+                    }}>
                 </MainTotalCard>
                 <MainTotalCard
                     icon={mainSocial[3].icon}
@@ -92,10 +109,16 @@ function MainTotal() {
                     activity={mainSocial[3].activity}
                     label={mainSocial[3].label}
                     socialMedia={mainSocial[3].socialMedia}
-                    smIcon={mainSocial[3].smIcon}>
+                    smIcon={mainSocial[3].smIcon}
+                    onClick={() => {
+                        setModalShow(true);
+                        setSocialType("youtube");
+                    }}>
                 </MainTotalCard>
             </div>
             
+            <MyModal show={modalShow} onHide={setModalShow} socialType={socialType} />
+
         </Container>
     );
 }

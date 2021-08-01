@@ -5,7 +5,7 @@ function OverviewCard(props) {
 
     return (
         //Overview-Today Cards
-        <Card className="overview-items">
+        <Card className="overview-items" >
             <Row>
                 <Col><div className="label-grey">{props.name}</div></Col>
                 <Col className="right-content">
